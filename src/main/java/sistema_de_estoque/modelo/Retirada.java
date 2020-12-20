@@ -11,9 +11,9 @@ public class Retirada {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long idRetirada;
 
-    @OneToMany
+    @OneToOne
     private Solicitante solicitante;
-    @OneToMany
+    @OneToOne
     private Produto produto;
     private int quantidade;
     private LocalDate dataRetirada;
