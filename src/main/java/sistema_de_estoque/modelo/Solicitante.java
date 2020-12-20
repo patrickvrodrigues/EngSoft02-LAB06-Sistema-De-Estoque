@@ -38,4 +38,8 @@ public class Solicitante {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public long getId(){
+        return this.idSolicitante;
+    }
 }

@@ -39,7 +39,7 @@ public class SolicitanteRepositoryTest {
     @Test
     public void deveBuscarSolicitantePeloCodigo() {
 
-        Optional<Solicitante> solicitanteTeste = solicitanteRepository.findById(1l);
+        Optional<Solicitante> solicitanteTeste = solicitanteRepository.findById(solicitante.getId());
         Assertions.assertTrue(solicitanteTeste.get().equals(solicitante));
     }
 }
