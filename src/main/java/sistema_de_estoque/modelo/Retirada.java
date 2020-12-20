@@ -1,10 +1,19 @@
 package sistema_de_estoque.modelo;
 
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
 public class Retirada {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private long idRetirada;
+
+    @OneToOne
     private Solicitante solicitante;
+    @OneToOne
     private Produto produto;
     private int quantidade;
     private LocalDate dataRetirada;
